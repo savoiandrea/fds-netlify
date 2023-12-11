@@ -1,12 +1,14 @@
 ---
 import { Picture } from "@astrojs/image/components";
 import heroImage from "assets/hero.png";
+import heroDory from "assets/dory-circle.svg";
 import Link from "@components/ui/link.astro";
 import { Icon } from "astro-icon";
 ---
 
+<!--
 <main
-  class="grid lg:grid-cols-2 place-items-center pt-16 pb-8 md:pt-12 md:pb-24">
+  class="grid lg:grid-cols-2 place-items-center pt-16 pb-8 md:pt-24 md:pb-36">
   <div class="py-6 md:order-1 hidden md:block">
     <Picture
       src={heroImage}
@@ -17,28 +19,45 @@ import { Icon } from "astro-icon";
       loading="eager"
       format="avif"
     />
+  -->
+
+  <main
+  class="grid lg:grid-cols-2 place-items-center pt-16 pb-16 md:pt-24 md:pb-24">
+  <div class="py-6 md:order-1 hidden md:block">
+    <Picture
+      src={heroDory}
+      alt="Dory Circle"
+      widths={[1200]}
+      aspectRatio="1:1"
+      sizes="(max-width: 800px) 100vw, 620px"
+      loading="eager"
+      format="avif"
+    />
+
   </div>
   <div>
     <h1
       class="text-5xl lg:text-6xl xl:text-7xl font-bold lg:tracking-tight xl:tracking-tighter">
-      Marketing website done with Astro
+      A window</br> to your bag.
     </h1>
-    <p class="text-lg mt-4 text-slate-600 max-w-xl">
-      Astroship is a starter template for startups, marketing websites & landing
-      pages.<wbr /> Built with Astro.build and TailwindCSS. You can quickly create
-      any website with this starter.
-    </p>
-    <div class="mt-6 flex flex-col sm:flex-row gap-3">
+    <!--
+      <p class="text-lg mt-6 text-slate-600 max-w-xl">
+      Dory is an ADHD supportive smart device that can be attached to your bag. Together with its mobile application, it monitors and informs the user about the presence of the items that were listed for any saved activity.<wbr />
+      </p>
+     -->
+    
+    <div class="mt-12 flex flex-col sm:flex-row gap-3">
       <Link
-        href="#"
-        href="https://web3templates.com/templates/astroship-starter-website-template-for-astro"
+        href="/overview"
         target="_blank"
-        class="flex gap-1 items-center justify-center"
+        class="flex gap-1 items-center justify-center bg-indigo-500"
         rel="noopener">
-        <Icon class="text-white w-5 h-5" name="bx:bxs-cloud-download" />
+        <!-- <Icon class="text-white w-5 h-5" name="bx:bxs-cloud-download" /> -->
 
-        Download for Free
+        Discover more
       </Link>
+      
+      <!--
       <Link
         size="lg"
         style="outline"
@@ -49,6 +68,8 @@ import { Icon } from "astro-icon";
         <Icon class="text-black w-4 h-4" name="bx:bxl-github" />
         GitHub Repo
       </Link>
+       -->
+
     </div>
   </div>
 </main>

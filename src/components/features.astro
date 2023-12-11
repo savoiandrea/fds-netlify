@@ -2,68 +2,80 @@
 // @ts-ignore
 import { Icon } from "astro-icon";
 
+const keywords = [
+  {
+    keyword: "Smart device",
+  },
+  {
+    keyword: "ADHD",
+  },
+  {
+    keyword: "Time management",
+  },
+  {
+    keyword: "Forgetfulness",
+  },
+]
+
 const features = [
   {
-    title: "Bring Your Own Framework",
+    title: "Topic",
     description:
-      "Build your site using React, Svelte, Vue, Preact, web components, or just plain ol' HTML + JavaScript.",
-    icon: "bx:bxs-briefcase",
+      "This project addresses the daily challenges confronted by individuals with ADHD in navigating contemporary urban life. It aims to develop a digital support solution that significantly alleviates the overwhelming nature of their daily experiences.",
+    icon: "bx:bxs-book-open",
   },
   {
-    title: "100% Static HTML, No JS",
+    title: "Current situation",
     description:
-      "Astro renders your entire page to static HTML, removing all JavaScript from your final build by default.",
-    icon: "bx:bxs-window-alt",
+      "Despite the unique difficulties faced by individuals with ADHD, their needs often receive less consideration than those of other vulnerable populations. This project recognizes the importance of designing tailored solutions to foster a more inclusive future for individuals with ADHD.",
+    icon: "bx:bxs-pin",
   },
   {
-    title: "On-Demand Components",
+    title: "Key findings",
     description:
-      "Need some JS? Astro can automatically hydrate interactive components when they become visible on the page.  ",
-    icon: "bx:bxs-data",
+      "Central to the seamless experience of city life is the transition from the comfort of home to the challenges of the outdoor environment. Through in-depth interviews with individuals affected by ADHD, a significant pain point has been identified: the imperative to keep track of items when leaving home to prevent forgetfulness or loss.",
+    icon: "bx:bxs-bulb",
   },
   {
-    title: "Broad Integration",
+    title: "Desired impact",
     description:
-      "Astro supports TypeScript, Scoped CSS, CSS Modules, Sass, Tailwind, Markdown, MDX, and any other npm packages.",
-    icon: "bx:bxs-bot",
-  },
-  {
-    title: "SEO Enabled",
-    description:
-      "Automatic sitemaps, RSS feeds, pagination and collections take the pain out of SEO and syndication. It just works!",
-    icon: "bx:bxs-file-find",
-  },
-  {
-    title: "Community",
-    description:
-      "Astro is an open source project powered by hundreds of contributors making thousands of individual contributions.",
-    icon: "bx:bxs-user",
+      "This project seeks to design an easily understandable and highly motivating solution. The primary goal is to remind individuals about the essential items they need to bring with them during transitions from one location to another. By focusing on user-centric design and addressing the specific needs of individuals with ADHD, this project aims to make a meaningful impact on their daily lives and contribute to a more inclusive urban environment.",
+    icon: "bx:bxs-diamond",
   },
 ];
 ---
 
-<div class="mt-16 md:mt-0">
-  <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
-    Everything you need to start a website
-  </h2>
-  <p class="text-lg mt-4 text-slate-600">
-    Astro comes batteries included. It takes the best parts of state-of-the-art
-    tools and adds its own innovations.
-  </p>
-</div>
-
-<div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-16">
-  {
-    features.map((item) => (
-      <div class="flex gap-4 items-start">
-        <div class="mt-1 bg-black rounded-full  p-2 w-8 h-8 shrink-0">
-          <Icon class="text-white" name={item.icon} />
+  <div class="mt-16 md:mt-16 mx-auto max-w-3xl flex flex-col items-start">
+    <div class="flex gap-1"> 
+    {
+      keywords.map((item) => (
+       <span class="ml-1 px-2 py-0.5 w-fit text-[10px] font-semibold uppercase text-white bg-indigo-500 rounded-full">
+       {item.keyword}
+      </span>
+      ))
+    }
+    </div>
+  
+    <h2 class="text-2xl lg:text-4xl font-bold lg:tracking-tight mt-6">
+      An ADHD supportive device
+    </h2>
+    <p class="text-lg mt-4 text-slate-600">
+      Dory is an ADHD supportive smart device that can be attached to your bag. Together with its mobile application, it monitors and informs the user about the presence of the items that were listed for any saved activity.
+    </p>
+  </div>
+  
+  <div class="grid sm:grid-cols-1 md:grid-cols-1 mt-16 gap-4 mx-auto max-w-3xl flex flex-col items-start">
+    {
+      features.map((item) => (
+        <div class="bg-slate-50 shadow-slate-500 ease-out duration-200 hover:shadow-md p-8 md:px-10 md:py-10 mt-1 rounded-lg flex gap-4 items-start">
+          <div class="mt-1 bg-indigo-500 rounded-full  p-2 w-8 h-8 shrink-0">
+            <Icon class="text-white" name={item.icon} />
+          </div>
+          <div>
+            <h3 class="text-indigo-600 font-semibold text-lg">{item.title}</h3>{" "}
+            <p class="text-slate-600 mt-2 leading-relaxed max-w-2xl">{item.description}</p>
+          </div>
         </div>
-        <div>
-          <h3 class="font-semibold text-lg">{item.title}</h3>{" "}
-          <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
-        </div>
-      </div>
-    ))
-  }
-</div>
+      ))
+    }
+  </div>
