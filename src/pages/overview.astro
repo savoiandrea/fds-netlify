@@ -2,6 +2,35 @@
 import Layout from "@layouts/Layout.astro";
 import Container from "@components/container.astro";
 import Sectionhead from "@components/sectionhead.astro";
+import { Icon } from "astro-icon";
+
+const feedbacks = [
+  {
+    title: "1",
+    description:
+      "It never happens that I leave home without having to return at least once or twice because I forgot something. Not only does this waste my time, but it's also frustrating.",
+  },
+  {
+    title: "2",
+    description:
+      "I always ask someone to accompany me when I have to attend an event in the city because I'm afraid of missing transportation connections or losing the items I have with me.",
+  },
+  {
+    title: "3",
+    description:
+      "I often lose track of time.",
+  },
+  {
+    title: "4",
+    description:
+      "I have little motivation to perform actions that are not particularly stimulating or require high concentration for extended periods.",
+  },
+  {
+    title: "4",
+    description:
+      "Being bombarded by stimuli is challenging to manage and overwhelming.",
+  },
+];
 
 ---
 
@@ -14,6 +43,28 @@ import Sectionhead from "@components/sectionhead.astro";
       </Fragment>
     </Sectionhead>
 
+    <div class="mt-16 md:mt-16 mx-auto max-w-3xl flex flex-col items-start">
+    
+      <h2 class="text-2xl lg:text-4xl font-bold lg:tracking-tight mt-6">
+        The context
+      </h2>
+      <p class="text-lg mt-4 text-slate-600">
+        Individuals with ADHD, or attention-deficit/hyperactivity disorder, face challenges in today's urban environment due to difficulties in managing multiple tasks simultaneously and maintaining focus, often leading to issues with time management, forgetfulness, and overwhelming stimuli. When it comes to being independent outside their homes, the risk is forgetting or even losing personal belongings during travels from one place to another. <br>According to the testimonies of those who have assisted us, these are some of their pain points:
+      </p>
+    </div>
+
+    <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-4 mx-auto max-w-5xl flex flex-col items-start">
+      {
+        feedbacks.map((item) => (
+          <div class="bg-indigo-500 shadow-slate-500 p-8 md:px-10 md:py-10 mt-1 rounded-lg flex gap-4 items-start">
+            <div>
+              <h3 class="text-indigo-300 font-semibold italic text-5xl">"</h3>
+              <p class="text-slate-50 mt-2 leading-relaxed max-w-2xl">{item.description}</p>
+            </div>
+          </div>
+        ))
+      }
+    </div>
     
   </Container>
 </Layout>

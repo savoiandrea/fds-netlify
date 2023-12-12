@@ -1,8 +1,10 @@
 ---
+import { Picture } from "@astrojs/image/components";
 import Container from "@components/container.astro";
 import Link from "@components/ui/link.astro";
 import Dropdown from "./dropdown.astro";
 import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
+import logoDory from "assets/dory-logo.svg";
 
 const menuitems = [
   /*
@@ -62,7 +64,16 @@ const menuitems = [
     <Astronav>
       <div class="flex w-full lg:w-auto items-center justify-between">
         <a href="/" class="text-lg">
-          <span class="font-bold text-slate-800">Dory</span>
+          <Picture
+            src={logoDory}
+            alt="Dory"
+            widths={[1200]}
+            sizes="64px"
+            fit="contain"
+            loading="eager"
+            format="avif"
+          />
+          <span class="font-bold text-slate-800 hidden">Dory</span>
           <span class="text-slate-500 hidden"> Project</span>
         </a>
         <div class="block lg:hidden">
