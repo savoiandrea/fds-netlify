@@ -34,10 +34,10 @@ const feedbacks = [
 
 ---
 
-<Layout title="Overview">
+<Layout title="Process">
   <Container>
     <Sectionhead>
-      <Fragment slot="title">Overview</Fragment>
+      <Fragment slot="title">Process</Fragment>
       <Fragment slot="desc">
         A brief description.
       </Fragment>
@@ -53,7 +53,13 @@ const feedbacks = [
       </p>
     </div>
 
-    <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-4 mx-auto max-w-5xl flex flex-col items-start">
+    <div class="mt-16 md:mt-16 mx-auto max-w-3xl flex flex-col items-start">
+      <p class="text-lg mt-4 text-slate-600">
+        According to the testimonies of those who have assisted us, these are some of their pain points:
+      </p>
+    </div>
+    
+    <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-4 mx-auto max-w-5xl flex flex-col items-stretch">
       {
         feedbacks.map((item) => (
           <div class="bg-indigo-500 shadow-slate-500 p-8 md:px-10 md:py-10 mt-1 rounded-lg flex gap-4 items-start">
