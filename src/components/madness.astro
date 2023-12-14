@@ -1,0 +1,95 @@
+---
+import Link from "./ui/link.astro";
+import { Icon } from "astro-icon";
+
+const feedbacks = [
+  {
+    title: "example",
+    description:
+      "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.",
+    user: "user",
+    icon:"bx:bxs-like",
+    color:"text-green-400"
+  },
+  {
+    title: "example2",
+    description:
+      "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.",
+    user: "user",
+    icon:"bx:bxs-like",
+    color:"text-green-400"
+  },
+  {
+    title: "example3",
+    description:
+      "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.",
+    user: "user",
+    icon:"bx:bxs-like",
+    color:"text-green-400"
+  },
+  {
+    title: "example4",
+    description:
+      "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.",
+    user: "user",
+    icon:"bx:bxs-like",
+    color:"text-green-400"
+  },
+];
+
+const improvements = [
+  {
+    title: "improvement",
+    description: "description",
+    icon: "bx:bxs-book-open",
+  },
+];
+
+---
+<div class="bg-indigo-50 mx-auto px-5">
+
+<div class="p-8 md:py-20 mt-20 mx-auto flex flex-col items-center text-center">
+  <div>  
+    <h2 class="text-2xl lg:text-4xl font-bold lg:tracking-tight mt-6">
+      Project Madness
+    </h2>
+    <p class="text-lg mt-4 text-slate-600 max-w-2xl">
+      Having conceptualized a smart device for ADHD people, we proceeded to create a digital showcase featuring our interactive prototype. This platform served to contextualize product usage and gather valuable feedback from testers within a simulated final experience scenario.
+    </p>
+  </div>
+
+  <div class="mt-12 max-w-5xl">
+    <video class="w-full" controls width="360" height="240">
+      <source src="https://onedrive.live.com/download?resid=86EFF36F5F36B025%21231&authkey=!ACtaXqPiiVjod4A" type='video/mp4'/>
+    </video>
+  </div>
+
+  <div class="my-32 mx-auto max-w-6xl">
+      <h3 class="text-xl lg:text-2xl font-normal lg:tracking-tight">
+        Main Feedbacks
+      </h3>
+      <div class="grid sm:grid-cols-2 md:grid-cols-4 mt-12 gap-4 flex items-stretch">
+        {
+          feedbacks.map((item) => (
+            <div class="bg-slate-50 shadow-slate-500 p-8 md:px-10 md:py-10 mt-1 rounded-lg flex-row gap-4 items-start">
+              
+              <div class="text-left">
+                <Icon class={item.color + " w-6 h-6"} name={item.icon} />
+                <p class="text-slate-600 text-md mt-6 leading-relaxed max-w-2xl">{item.description}</p>
+              </div>
+              <!--
+              <div class="text-left flex items-center gap-4 mt-4">
+                <div class="mt-1 bg-indigo-500 rounded-full p-2 w-8 h-8 shrink-0">
+                <Icon class="text-white" name="bx:bxs-user" />
+                </div>
+                <p>{item.user}</p>
+              </div>
+              -->
+              
+            </div>
+          ))
+        }
+      </div>
+  </div>
+  
+</div>

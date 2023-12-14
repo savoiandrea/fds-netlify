@@ -1,0 +1,109 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+import Madness from "@components/madness.astro";
+import Improvements from "@components/improvements.astro";
+import { Icon } from "astro-icon";
+
+const feedbacks = [
+  {
+    title: "1",
+    description:
+      "It never happens that I leave home without having to return at least once or twice because I forgot something. Not only does this waste my time, but it's also frustrating.",
+  },
+  {
+    title: "2",
+    description:
+      "I always ask someone to accompany me when I have to attend an event in the city because I'm afraid of missing transportation connections or losing the items I have with me.",
+  },
+  {
+    title: "3",
+    description:
+      "I often lose track of time.",
+  },
+  {
+    title: "4",
+    description:
+      "I have little motivation to perform actions that are not particularly stimulating or require high concentration for extended periods.",
+  },
+  {
+    title: "4",
+    description:
+      "Being bombarded by stimuli is challenging to manage and overwhelming.",
+  },
+];
+
+---
+
+<Layout title="Process">
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title">Design Process</Fragment>
+      <Fragment slot="desc">
+        A brief description.
+      </Fragment>
+    </Sectionhead>
+
+    <div class="mt-24 md:mt-24 mx-auto max-w-3xl flex flex-col items-start">
+      <h2 class="text-2xl lg:text-4xl font-bold lg:tracking-tight mt-6">
+        The context
+      </h2>
+      <p class="text-lg mt-4 text-slate-600">
+        Individuals with ADHD, or attention-deficit/hyperactivity disorder, face challenges in today's urban environment due to difficulties in managing multiple tasks simultaneously and maintaining focus, often leading to issues with time management, forgetfulness, and overwhelming stimuli. When it comes to being independent outside their homes, the risk is forgetting or even losing personal belongings during travels from one place to another. <br>We worked closely with ADHD people, who helped us a lot thanks to their testimonies.
+      </p>
+    </div>
+
+    <div class="mt-32 mx-auto max-w-5xl">
+      <h2 class="text-indigo-500 text-center text-2xl lg:text-4xl font-bold lg:tracking-tight">
+        Which are ADHD people's main pain points?
+      </h2>
+    </div>
+
+    <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-4 mx-auto max-w-5xl flex flex-col items-stretch">
+      {
+        feedbacks.map((item) => (
+          <div class="bg-indigo-500 shadow-slate-500 p-8 md:px-8 md:py-10 mt-1 rounded-lg flex gap-4 items-start">
+            <div>
+              <h3 class="text-indigo-300 font-semibold italic text-5xl">"</h3>
+              <p class="text-slate-50 mt-2 leading-relaxed max-w-2xl">{item.description}</p>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+
+    <div class="grid sm:grid-cols-1 md:grid-cols-2  gap-24 mt-24 md:mt-24 mx-auto max-w-6xl flex flex-col items-center">
+      <div class="max-w-xl">
+        <h2 class="text-2xl lg:text-4xl font-bold lg:tracking-tight mt-6">
+          The problem
+        </h2>
+        <p class="text-lg mt-4 text-slate-600 max-w-2xl">
+          Currently, individuals with ADHD are given little consideration when it comes to more vulnerable populations, as their difficulties do not manifest explicitly to people outside their everyday context. For this reason, there are very few initiatives nowadays to help them better navigate today's city life, where keeping up with the speed of information, schedules, and understanding what is happening around us is essential.
+          <br><br>
+          What we have attempted to do with our project is to address, through an interactive and smart device, the need for support that accompanies individuals with ADHD in their daily routines. The goal is to enable them to experience city life calmly and without unnecessary concerns.
+        </p>
+      </div>
+      <h2 class="text-indigo-500 text-3xl lg:text-5xl font-bold lg:tracking-tight mt-6">
+        “How might we motivate ADHD young adults to take part in events in the city?”
+      </h2>
+    </div>
+
+    <div class="grid sm:grid-cols-1 md:grid-cols-2  gap-16 mt-24 md:mt-24 mx-auto max-w-6xl flex flex-col items-center">
+      <h2 class="text-indigo-500 text-3xl lg:text-5xl font-bold lg:tracking-tight mt-6">
+        Image
+      </h2>
+      <div class="max-w-xl">
+        <h2 class="text-2xl lg:text-4xl font-bold lg:tracking-tight mt-6">
+          The big idea
+        </h2>
+        <p class="text-lg mt-4 text-slate-600 max-w-2xl">
+          Our project centers on creating a device to support individuals with ADHD. This smart tool ensures a seamless city experience by reminding them of essential items during outdoor activities with just a glance, offering independence in their daily lives.
+        </p>
+      </div>
+    </div>
+
+    <Madness />
+    <Improvements />
+  </Container>
+</Layout>
