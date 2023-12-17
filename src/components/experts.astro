@@ -1,0 +1,83 @@
+---
+import Link from "./ui/link.astro";
+import { Picture } from "@astrojs/image/components";
+import testers from 'assets/testers.svg';
+import timeline from 'assets/timeline.svg';
+import journey from 'assets/journey.svg';
+import { Icon } from "astro-icon";
+import Tester from "./ui/tester.astro";
+
+const expert = [
+  {
+    name: "Astrid Gollner",
+    title: "AIFA Lombardia",
+  },
+  {
+    name: "Gaia Corciulo",
+    title: "AIFA Milano",
+  },
+  {
+    name: "Fabio Regis",
+    title: "Pedagogue at “Imparole”",
+  },
+  {
+    name: "Clara Carlesi",
+    title: "ADHD Activist “La Linea di Mezzo”",
+  },
+  {
+    name: "Paolo Raffin",
+    title: "ADHD Activist “ADHD e oltre”",
+  },
+
+  {
+    name: "Francesca Squadrelli",
+    title: "Clinical psychologist, GAM Medical",
+  },
+  {
+    name: "Federico Molteni",
+    title: "GAM patient",
+  },
+  {
+    name: "Valerio Ventura",
+    title: "GAM patient",
+  },
+  {
+    name: "Matteo Sammartano",
+    title: "GAM patient",
+  },
+  {
+    name: "Mauricio Gutierrez",
+    title: "GAM patient",
+  },
+];
+
+---
+<div class="bg-indigo-50 mx-auto px-5 py-24 my-24">
+
+    <h2 class="text-center text-2xl lg:text-4xl font-bold lg:tracking-tight">
+      Designed with and for ADHD people
+    </h2>
+
+  <!--
+  <div class="shrink-0 relative max-w-5xl">
+
+    <Tester
+    name="Nome"
+    title="Titolo"
+    position=""
+  />
+
+  </div>
+   -->
+  
+  <div class="flex flex-row items-center mt-16 mx-auto max-w-5xl">
+    <Picture
+      src={journey}
+      alt="journey"
+      widths={[2000]}
+      class="mx-auto"
+    />
+  </div>
+
+
+</div>

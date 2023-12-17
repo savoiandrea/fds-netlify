@@ -4,7 +4,9 @@ import Container from "@components/container.astro";
 import Sectionhead from "@components/sectionhead.astro";
 import Madness from "@components/madness.astro";
 import Improvements from "@components/improvements.astro";
+import Experts from "@components/experts.astro";
 import { Icon } from "astro-icon";
+import Experts from "@components/experts.astro";
 
 const feedbacks = [
   {
@@ -63,15 +65,17 @@ const feedbacks = [
     <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-4 mx-auto max-w-5xl flex flex-col items-stretch">
       {
         feedbacks.map((item) => (
-          <div class="bg-indigo-500 shadow-slate-500 p-8 md:px-8 md:py-10 mt-1 rounded-lg flex gap-4 items-start">
+          <div class="bg-indigo-500 shadow-slate-500 p-8 md:px-8 md:py-8 mt-1 rounded-lg flex gap-2 items-start">
             <div>
-              <h3 class="text-indigo-300 font-semibold italic text-5xl">"</h3>
-              <p class="text-slate-50 mt-2 leading-relaxed max-w-2xl">{item.description}</p>
+              <h3 class="text-indigo-300 font-semibold italic text-5xl leading-6">"</h3>
+              <p class="text-slate-50 leading-relaxed max-w-2xl">{item.description}</p>
             </div>
           </div>
         ))
       }
     </div>
+
+    <Experts />
 
     <div class="grid sm:grid-cols-1 md:grid-cols-2  gap-24 mt-24 md:mt-24 mx-auto max-w-6xl flex flex-col items-center">
       <div class="max-w-xl">
