@@ -1,0 +1,135 @@
+---
+import Link from "./ui/link.astro";
+import { Icon } from "astro-icon";
+import { Picture } from "@astrojs/image/components";
+
+const ergonomics = [
+  {
+    title: "Why round?",
+    description: "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words",
+  },
+
+  {
+    title: "Size",
+    description: "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words",
+  },
+
+  {
+    title: "Grip",
+    description: "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words",
+  },
+];
+
+
+---
+<div class="mx-auto px-5">
+
+<div class="my-24 mx-auto max-w-7xl flex flex-col items-center text-center">
+  <div>  
+    <h2 class="text-2xl lg:text-3xl font-bold lg:tracking-tight mt-1">
+      Ergonomics
+    </h2>
+  </div>
+
+  <div class="flex items-start max-w-5xl gap-4 mt-8">
+    
+      {
+        ergonomics.map((item) => (
+        <div class="bg-indigo-50 flex flex-1 flex-col rounded-lg justify-between self-stretch items-center gap-4 p-8">
+           
+              <h2 class=" text-center mt-1 text-xl font-semibold text-black self-stretch">{item.title}</h2>
+
+              <p class="text-left text-sm text-slate-700">{item.description}</p>
+
+        </div>
+        ))
+      }
+  </div>
+</div>
+
+  <div class="my-20 mx-auto max-w-7xl flex flex-col items-center text-center">
+      <h2 class="text-2xl lg:text-3xl font-bold lg:tracking-tight mt-1">
+        Details
+      </h2>
+    <div class="flex max-w-7xl items-start gap-8 mt-8">
+      <div class="flex flex-col self-stretch items-center gap-7">
+            <img src="" alt="image" height="500px" class="bg-slate-500 self-stretch h-96 aspect-square">
+            <div class="flex flex-col items-center gap-3 self-stretch">
+              <h3 class="text-center mt-1 text-xl font-semibold text-black self-stretch">Magnets</h3>
+              <p class="text-center text-sm text-slate-700">Magnets description</p>
+            </div>
+      </div>
+      <div class="flex flex-col self-stretch items-center gap-7">
+            <img src="" alt="image" height="500px" class="bg-slate-500 self-stretch h-96 aspect-square">
+            <div class="flex flex-col items-center gap-3 self-stretch">
+              <h3 class="text-center mt-1 text-xl font-semibold text-black self-stretch">Magnets</h3>
+              <p class="text-center text-sm text-slate-700">Magnets description</p>
+            </div>
+          </div>
+    </div>
+
+    <div class="my-24 mx-auto max-w-7xl flex flex-col items-center text-center">
+      <div>  
+        <h2 class="text-2xl lg:text-3xl font-bold lg:tracking-tight mt-1">
+          Feedbacks & Feedforwards
+        </h2>
+      </div>
+
+      <div class="bg-indigo-50 rounded-lg inline-flex items-start gap-20 mt-9 p-6 w-full">
+        <div class="text-left flex flex-col max-w-lg items-start self-stretch gap-12 p-9 order-0">
+          <h2 class="text-2xl lg:text-3xl font-semibold lg:tracking-tight">Screens</h2>
+          <div class="grid grid-cols-2 items-start gap-9 self-stretch">
+              <div class="flex flex-col items-start gap-4 self-stretch">
+                <h3 class="text-lg font-semibold lg:tracking-tight">Readability</h3>
+                <p class="text-md text-slate-700">Priority given to images</p>
+              </div>
+              <div class="flex flex-col items-start gap-4 self-stretch">
+                <h3 class="text-lg font-semibold lg:tracking-tight">Usability</h3>
+                <p class="text-md text-slate-700">Icon colors, size, highlight more what is missing</p>
+              </div>
+          </div>
+        </div>
+
+        <div>
+          <img src="" alt="image" height="500px" class="bg-slate-500 self-stretch h-96 aspect-square">
+        </div>
+      </div>
+
+      <div class="bg-indigo-50 rounded-lg inline-flex items-start gap-20 mt-9 p-6 w-full">
+        <div class="text-left flex flex-col max-w-lg items-start self-stretch gap-12 p-9 order-1">
+          <h2 class="text-2xl lg:text-3xl font-semibold lg:tracking-tight">LEDs</h2>
+          <div class="flex items-start gap-9 self-stretch">
+              <div class="grid grid-cols-1 items-start gap-4 self-stretch">
+                <h3 class="text-lg font-semibold lg:tracking-tight">Notifications</h3>
+                <ul class="text-md text-slate-700 list-disc pl-4">
+                  <li>When leaving home for the activity</li>
+                  <li>When the activity is almost ending</li>
+                </ul>
+              </div>
+          </div>
+        </div>
+
+        <div>
+          <img src="" alt="image" height="500px" class="bg-slate-500 self-stretch h-96 aspect-square">
+        </div>
+      </div>
+
+      <div class="bg-indigo-50 rounded-lg inline-flex items-start gap-20 mt-9 p-6 w-full">
+        <div class="text-left flex flex-col max-w-lg items-start self-stretch gap-12 p-9 order-0">
+          <h2 class="text-2xl lg:text-3xl font-semibold lg:tracking-tight">Buzzer</h2>
+          <div class="grid grid-cols-2 items-start gap-9 self-stretch">
+              <div class="flex flex-col items-start gap-4 self-stretch">
+                <h3 class="text-lg font-semibold lg:tracking-tight">Notification</h3>
+                <p class="text-md text-slate-700">When objects are inserted and took out of rhe bag</p>
+              </div>
+          </div>
+        </div>
+
+        <div>
+          <img src="" alt="image" height="500px" class="bg-slate-500 self-stretch h-96 aspect-square">
+        </div>
+      </div>
+
+    </div>
+
+</div>

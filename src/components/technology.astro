@@ -1,0 +1,67 @@
+---
+import Link from "./ui/link.astro";
+import { Icon } from "astro-icon";
+import hero from 'assets/hero-alt.png';
+import { Picture } from "@astrojs/image/components";
+
+
+---
+<div class="bg-indigo-50 mx-auto px-5 py-10">
+  
+  <div class="mx-auto max-w-7xl flex flex-col items-center">
+        <div>  
+          <h2 class="text-center text-2xl lg:text-3xl font-bold lg:tracking-tight">
+            Technology
+          </h2>
+        </div>
+
+        <div class="flex items-center mt-6">
+          <Picture
+            src={hero}
+            alt="Technology"
+            sizes="(max-width: 800px) 100vw, 800px"
+            widths={[200, 400, 800]}
+            aspectRatio="16:9"
+            background="#ffffff"
+            fit="cover"
+            position="center"
+            loading="eager"
+            decoding="sync"
+            class="w-full rounded-md"
+          />
+        </div>
+  </div>
+
+  <div class="mx-auto mt-16 max-w-7xl flex flex-col items-start gap-9">
+
+    <div class="mx-auto flex flex-col content-between self-stretch items-center">
+      <div class="flex max-w-md flex-col items-start gap-4">
+          <h3 class="self-stretch text-2xl font-semibold lg:tracking-tight">RFID Reader & Stickers</h3>
+          <p class="self-stretch">In order to keep track of the objects’ presence inside your bag, RFID technology was employed. This choice led to both advantages and constraints.</p>
+      </div>
+          <div class=" max-w-lg max-h-80" style="background: url(assets/rfid.jpg), lightgray 50% / cover no-repeat;">
+          </div>
+
+      <div class=" max-w-5xl flex items-start gap-4 self-stretch mt-9">
+        <div class="bg-white flex flex-col rounded-lg p-7 items-start gap-2 self-stretch w-1/2">
+            <h3 class="text-md font-semibold lg:tracking-tight">Advantages</h3>
+            <ul class="text-slate-800 list-disc pl-4">
+              <li>Affordable for the end user</li>
+              <li>Requires low performances hardware to work</li>
+            </ul>
+        </div>
+        <div class="bg-white flex flex-col rounded-lg p-7 items-start gap-2 self-stretch w-1/2">
+            <h3 class="text-md font-semibold lg:tracking-tight">Constraints</h3>
+            <ul class="text-slate-800 list-disc pl-4">
+              <li>It requires the user to place RFID stickers on each item they want to register</li>
+              <li>There might be problems with applying stickers to some kinds of surfaces, shapes and materials</li>
+            </ul>
+        </div>
+      </div>
+
+  </div>
+
+  </div>
+
+
+</div>

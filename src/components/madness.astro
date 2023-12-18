@@ -1,6 +1,8 @@
 ---
 import Link from "./ui/link.astro";
 import { Icon } from "astro-icon";
+import { Picture } from "@astrojs/image/components";
+import team from 'assets/team.jpeg';
 
 const feedbacks = [
   {
@@ -64,14 +66,16 @@ const improvements = [
     </video>
   </div>
 
-  <div class="my-32 mx-auto max-w-6xl">
+  <div class="flex items-end gap-16 my-32 max-w-5xl">
+    <div class="mx-auto max-w-6xl">
+      
       <h3 class="text-xl lg:text-2xl font-normal lg:tracking-tight">
         Main Feedbacks
       </h3>
-      <div class="grid sm:grid-cols-2 md:grid-cols-4 mt-12 gap-4 flex items-stretch">
+      <div class="grid sm:grid-cols-2 md:grid-cols-2 mt-16 gap-4 mx-auto max-w-5xl flex flex-col items-stretch">
         {
           feedbacks.map((item) => (
-            <div class="bg-slate-50 shadow-slate-500 p-8 md:px-10 md:py-10 mt-1 rounded-lg flex-row gap-4 items-start">
+            <div class="bg-slate-50 shadow-slate-500 p-8 md:px-8 md:py-8 mt-1 rounded-lg flex gap-2 items-start">
               
               <div class="text-left">
                 <Icon class={item.color + " w-6 h-6"} name={item.icon} />
@@ -85,11 +89,11 @@ const improvements = [
                 <p>{item.user}</p>
               </div>
               -->
-              
             </div>
           ))
         }
       </div>
   </div>
+</div>
   
 </div>
