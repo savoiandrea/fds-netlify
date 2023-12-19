@@ -2,7 +2,8 @@
 // @ts-ignore
 import { Icon } from "astro-icon";
 import { Image } from "@astrojs/image/components";
-import render from "assets/render-home.png";
+import render from "assets/bag.png";
+import phone from "assets/phone/home.png";
 import illustrations from "assets/illustrations.svg";
 
 const keywords = [
@@ -50,14 +51,14 @@ const features = [
 <html class="scroll-smooth">
 <div class="max-w-screen-xl mx-auto px-5">
 
-  <div class="mx-auto max-w-7xl">
+  <div class="mx-auto max-w-6xl">
     
-  <div id="target" class="flex justify-between items-center mt-9 p-6 mx-auto w-full">
+  <div id="target" class="flex justify-between items-center mt-20 p-6 mx-auto w-full">
     <div class="text-left flex flex-col items-start gap-6 p-9 order-0">
-    <div class="flex flex-wrap gap-1"> 
+    <div class="flex flex-wrap gap-1 max-w-xs"> 
         {
           keywords.map((item) => (
-          <span class="ml-1 px-2 py-1 w-fit text-xs font-medium uppercase text-white bg-indigo-500 rounded-full inline-flex">
+          <span class="ml-1 mt-1 px-2 py-1 w-fit text-xs font-medium uppercase text-white bg-indigo-500 rounded-full inline-flex">
           {item.keyword}
           </span>
           ))
@@ -66,21 +67,7 @@ const features = [
     
       <div class="flex flex-col pl-2 gap-2 max-w-lg">
       <h2 class="text-2xl lg:text-3xl font-semibold lg:tracking-tight">An ADHD supportive device</h2>
-        <p class="text-lg text-slate-600 max-w-2xl">Dory is designed to support ADHD people in their daily lives. Together with its mobile application, it monitors and informs the user about the presence of the items listed for each saved activity.
-        </p>
-      </div>
-      
-    </div>
-    <div>
-      <Image src={render} alt="" height={400} class="object-fill"/>
-    </div>
-  </div>
-
-  <div class="flex justify-between items-center mt-9 p-6 mx-auto w-full">
-    <div class="text-left flex flex-col items-start gap-6 p-9 order-1">
-      <div class="flex flex-col pl-2 gap-2 max-w-lg">
-      <h2 class="text-2xl lg:text-3xl font-semibold lg:tracking-tight">Be aware of all your personal items</h2>
-        <p class="text-lg text-slate-600 max-w-2xl">Through the app, you can have immediate control over the items you will need throughout your day depending on your activities.
+        <p class="text-lg text-slate-600 max-w-md">Dory is designed to support ADHD people in their daily lives. Together with its mobile application, it monitors and informs the user about the presence of the items listed for each saved activity.
         </p>
       </div>
       
@@ -91,17 +78,31 @@ const features = [
   </div>
 
   <div class="flex justify-between items-center mt-9 p-6 mx-auto w-full">
+    <div class="text-left flex flex-col items-start p-9 order-1">
+      <div class="flex flex-col pl-2 gap-2 max-w-lg">
+      <h2 class="text-2xl lg:text-3xl font-semibold lg:tracking-tight">Be aware of all your personal items</h2>
+        <p class="text-lg text-slate-600 max-w-md">Through the app, you can have immediate control over the items you will need throughout your day depending on your activities.
+        </p>
+      </div>
+      
+    </div>
+    <div>
+      <Image src={phone} alt="" height={400} class=""/>
+    </div>
+  </div>
+
+  <div class="flex justify-between items-center mt-9 p-6 mx-auto w-full">
     <div class="text-left flex flex-col items-start gap-6 p-9 order-0">
       <div class="flex flex-col pl-2 gap-2 max-w-lg">
       <h2 class="text-2xl lg:text-3xl font-semibold lg:tracking-tight">An interface designed to be clear</h2>
-        <p class="text-lg text-slate-600 max-w-2xl">
+        <p class="text-lg text-slate-600 max-w-md">
           We designed Dory with the people who need it most at the center. This is why we have made the information and interface as clear and engaging as possible.
         </p>
       </div>
       
     </div>
     <div>
-      <Image src={illustrations} alt="" height={500} class="object-fill"/>
+      <Image src={illustrations} alt="" height={400} class="object-fill"/>
     </div>
   </div>
 

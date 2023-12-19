@@ -8,34 +8,75 @@ const feedbacks = [
   {
     title: "example",
     description:
-      "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.",
+      "Simple use of/interaction with the mobile application",
     user: "user",
     icon:"bx:bxs-like",
-    color:"text-green-400"
+    color:"text-indigo-400"
   },
   {
     title: "example2",
     description:
-      "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.",
+      "Satisfactory visualization of the bag recognizing objects",
     user: "user",
     icon:"bx:bxs-like",
-    color:"text-green-400"
+    color:"text-indigo-400"
   },
   {
     title: "example3",
     description:
-      "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.",
+      "Satisfaction in receiving visual and auditory feedback from the system",
     user: "user",
     icon:"bx:bxs-like",
-    color:"text-green-400"
+    color:"text-indigo-400"
   },
   {
     title: "example4",
     description:
-      "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.",
+      "Enjoyment in taking part in a variety of scenarios",
     user: "user",
     icon:"bx:bxs-like",
-    color:"text-green-400"
+    color:"text-indigo-400"
+  },
+
+  {
+    title: "example",
+    description:
+      "Work on the intuitiveness of the users’ requests (e.g. calendar shortcut in homepage or non clear request to select objects if worn)",
+    user: "user",
+    icon:"bx:bxs-dislike",
+    color:"text-red-400"
+  },
+  {
+    title: "example",
+    description:
+      "Work on shortcuts or overviews of contents (e.g. in the “office” label potentially show an overview of the start time/ end time or quantity of objects listed)",
+    user: "user",
+    icon:"bx:bxs-dislike",
+    color:"text-red-400"
+  },
+  {
+    title: "example",
+    description:
+      "Implement the possibility to shut down the reminders and notifications, e.g. when some items are missing or worn",
+    user: "user",
+    icon:"bx:bxs-dislike",
+    color:"text-red-400"
+  },
+  {
+    title: "example",
+    description:
+      "Further confirmations (e.g. that I have the object)",
+    user: "user",
+    icon:"bx:bxs-dislike",
+    color:"text-red-400"
+  },
+  {
+    title: "example",
+    description:
+      "(not for all) Non-intuitive relationship between signifiers when objects are in the bag/ missing",
+    user: "user",
+    icon:"bx:bxs-dislike",
+    color:"text-red-400"
   },
 ];
 
@@ -72,7 +113,7 @@ const improvements = [
       <h3 class="text-xl lg:text-2xl font-normal lg:tracking-tight">
         Main Feedbacks
       </h3>
-      <div class="grid sm:grid-cols-2 md:grid-cols-2 mt-16 gap-4 mx-auto max-w-5xl flex flex-col items-stretch">
+      <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-8 gap-4 mx-auto max-w-5xl items-stretch">
         {
           feedbacks.map((item) => (
             <div class="bg-slate-50 shadow-slate-500 p-8 md:px-8 md:py-8 mt-1 rounded-lg flex gap-2 items-start">
