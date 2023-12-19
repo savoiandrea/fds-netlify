@@ -1,0 +1,146 @@
+---
+import Link from "./ui/link.astro";
+import team from "assets/team.jpeg";
+import { Image } from "@astrojs/image/components";
+import { Icon } from "astro-icon";
+import andrea from "assets/team/andrea.png";
+import fabiana from "assets/team/fabiana.png";
+import sophia from "assets/team/sophia.png";
+import yantong from "assets/team/yantong.png";
+
+import polimi from "assets/polimi.png";
+import { reference } from "astro:content";
+
+const references = [
+  {
+    description: "Knapp J., Zeratsky J., Kowitz B., (2016). Sprint: How to Solve Big Problems and Test New Ideas in Just Five Days. New York : Simon & Schuster",
+  },
+  {
+    description: "Sanders, E. (2000). Generative tools for co-designing, in Scrivener et al. (Eds) Collaborative Design, Sprigler-Verlag, London Limited.",
+  },
+
+]
+
+const professors = [
+  {
+    name: "Marco Ajovalasit",
+  },
+  {
+    name: "Mariana Ciancia",
+  },
+  {
+    name: "Mattia Gianotti",
+  },
+  {
+    name: "Francesca Macolino",
+  },
+  {
+    name: "Eleonora Beccaluva",
+  },
+  {
+    name: "Marco Tintori",
+  },
+]
+---
+<div class="mx-auto px-5">
+    <div class="mt-12 flex justify-center mx-auto max-w-7xl flex-col items-center text-center">
+      <h2 class="text-xl lg:text-2xl font-bold lg:tracking-tight mt-8">
+        Conclusions
+      </h2>
+      <p class="mt-2 max-w-xl text-md text-slate-700">Dory wants to create a new way to support the daily lives of individuals with ADHD by seamlessly integrating technology to their lives. With an intuitive experience, it streamlines organization and minimizes stress. Dory transforms routines providing timely reminders and ensuring essentials are never forgotten. By fusing convenience with accessibility, Dory empowers users to navigate urban life with newfound ease, fostering independence and a worry-free experience.</p>
+
+      <div class="mt-12 flex justify-center items-start mx-auto w-full max-w-3xl">
+        <h2 class="text-xl lg:text-2xl font-bold lg:tracking-tight mt-8">
+          The team
+        </h2>
+      </div>
+
+      
+      <div class="mt-4 mb-24 grid grid-cols-3 items-start gap-8 mx-auto w-full max-w-3xl">
+        <div class="flex flex-col items-center gap-4 mt-8">
+          <Image src={sophia} alt="" width={160} height={160} class=" rounded-full border-4 border-indigo-300"/>
+          <div class="flex flex-col items-center gap-1 self-stretch">
+            <h3 class="text-lg font-bold tracking-tight">Sophia Amati</h3>
+            <p>Graphic Designer</p>
+          </div>
+        </div>
+
+        <div class="flex flex-col items-center gap-4 mt-8">
+          <Image src={andrea} alt="" width={160} height={160} class=" rounded-full border-4 border-indigo-300"/>
+          <div class="flex flex-col items-center gap-1 self-stretch">
+            <h3 class="text-lg font-bold tracking-tight">Martina Rinascimento</h3>
+            <p>Graphic Designer</p>
+          </div>
+        </div>
+
+        <div class="flex flex-col items-center gap-4 mt-8">
+          <Image src={andrea} alt="" width={160} height={160} class=" rounded-full border-4 border-indigo-300"/>
+          <div class="flex flex-col items-center gap-1 self-stretch">
+            <h3 class="text-lg font-bold tracking-tight">Annachiara Lelli</h3>
+            <p>Graphic Designer</p>
+          </div>
+        </div>
+
+        <div class="flex flex-col items-center gap-4 mt-8">
+          <Image src={fabiana} alt="" width={160} height={160} class=" rounded-full border-4 border-indigo-300"/>
+          <div class="flex flex-col items-center gap-1 self-stretch">
+            <h3 class="text-lg font-bold tracking-tight">Fabiana Marino</h3>
+            <p>Graphic Designer</p>
+          </div>
+        </div>
+
+        <div class="flex flex-col items-center gap-4 mt-8">
+          <Image src={andrea} alt="" width={160} height={160} class=" rounded-full border-4 border-indigo-300"/>
+          <div class="flex flex-col items-center gap-1 self-stretch">
+            <h3 class="text-lg font-bold tracking-tight">Andrea Savoia</h3>
+            <p>Graphic Designer</p>
+          </div>
+        </div>
+
+        <div class="flex flex-col items-center gap-4 mt-8">
+          <Image src={yantong} alt="" width={160} height={160} class=" rounded-full border-4 border-indigo-300"/>
+          <div class="flex flex-col items-center gap-1 self-stretch">
+            <h3 class="text-lg font-bold tracking-tight">Wang Yantong</h3>
+            <p>Graphic Designer</p>
+          </div>
+        </div>
+
+      </div>
+
+        <h2 class="text-lg font-semibold lg:tracking-tight mt-24">
+          References
+        </h2>
+        <ul class="mt-2 max-w-md text-left text-xs text-slate-700">
+          {
+          references.map((item) => (
+          <li class="ml-1 px-2 py-1 w-fit list-decimal self-stretch">
+          {item.description}
+          </li>
+          ))
+        }
+        </ul>
+
+        <h2 class="text-lg font-semibold lg:tracking-tight mt-24">
+          Teaching Team
+        </h2>
+        <ul class="mt-2 max-w-md text-center text-sm text-slate-700">
+          {
+          professors.map((item) => (
+          <li class="px-2 py-1 self-stretch">
+          {item.name}
+          </li>
+          ))
+        }
+        </ul>
+
+        <div class="flex flex-col items-center gap-4 mt-24">
+          <Image src={polimi} alt="" height={120} class="object-fill"/>
+          <div class="flex flex-col items-center gap-1 self-stretch">
+            <!--<h3 class="text-lg font-bold tracking-tight">Politecnico di Milano</h3>-->
+            <p>Digital & Interaction Design <br>Final Design Studio <br>A.A. 2023/2024</p>
+          </div>
+        </div>
+
+    </div>
+</div>
+

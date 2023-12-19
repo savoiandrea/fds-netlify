@@ -1,0 +1,45 @@
+---
+import Link from "./ui/link.astro";
+import team from "assets/team.jpeg";
+import { Image } from "@astrojs/image/components";
+import { Icon } from "astro-icon";
+import poster1 from "assets/posters/poster-1.svg";
+import poster2 from "assets/posters/poster-2.svg";
+---
+<div class="bg-white mx-auto px-5">
+    <div class="mt-12 flex justify-center mx-auto max-w-7xl flex-col items-center text-center">
+      <h2 class="text-xl lg:text-2xl font-bold lg:tracking-tight mt-8">
+        Posters
+      </h2>
+
+      <div class="mt-12 flex justify-center gap-8 items-start mx-auto w-full max-w-3xl">
+        <Image src={poster1} alt="" width={420} height={1200} />
+        <Image src={poster2} alt="" width={420} height={1200} />
+      </div>
+
+      <div class="my-12 flex flex-col sm:flex-row gap-3">
+        <Link
+          href=""
+          class="flex gap-1 items-center justify-center bg-black"
+          rel="noopener"
+          style="outline" 
+          >
+          <Icon class="text-black w-5 h-5" name="bx:bxs-download" />
+
+          Download Posters
+        </Link>
+      </div>
+    </div>
+    <div class="mt-12 flex justify-center mx-auto max-w-7xl flex-col items-center text-center">
+      <h2 class="text-xl lg:text-2xl font-bold lg:tracking-tight mt-8">
+        Video
+      </h2>
+      <iframe class="mt-12" src="https://polimi365-my.sharepoint.com/personal/10731838_polimi_it/_layouts/15/embed.aspx?UniqueId=a2c1aa0f-30eb-44a1-9c81-89cc53dfbe06&embed=%7B%22hvm%22%3Atrue%2C%22ust%22%3Atrue%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create" width="1080" height="720" frameborder="0" scrolling="no" allowfullscreen title="Video Prova.mp4"></iframe>
+    </div>
+    <div class="mt-12 flex justify-center mx-auto max-w-7xl flex-col items-center text-center">
+      <h2 class="text-xl lg:text-2xl font-bold lg:tracking-tight mt-8">
+        VIVA Presentation
+      </h2>
+    </div>
+</div>
+

@@ -1,0 +1,120 @@
+---
+import Link from "./ui/link.astro";
+import { Icon } from "astro-icon";
+import { Image } from "@astrojs/image/components";
+import prova from "assets/hero-alt.png";
+
+import home from "assets/screens/home.svg";
+import calendar from "assets/screens/calendar.svg";
+import profile from "assets/screens/profile.svg";
+
+import wireframe from "assets/screens/wireframe.svg";
+import adhd from "assets/adhd-testing.jpeg";
+import madness from "assets/madness-testing.jpeg";
+
+---
+<div class="bg-indigo-50 mx-auto px-5">
+
+  <div class="mt-10 py-24 mx-auto max-w-7xl flex flex-col items-center text-center">
+      <h2 class="text-3xl lg:text-4xl font-bold lg:tracking-tight mt-1">
+        Usability
+      </h2>
+      <h2 class="text-lg lg:text-xl font-bold lg:tracking-tight mt-8">
+        Structure
+      </h2>
+      <p class="mt-2 max-w-xl text-md text-slate-700">The architecture of the aplication is based on testing conducted thoughout different points of the design process. It is divided into three sections, and a plus button is always present to allow quick access to items or activities addition.</p>
+
+      <div class="my-12 flex justify-between w-full items-start max-w-4xl">
+
+        <div class="flex flex-col items-center gap-9">
+          <Image src={home} alt="" width={260} height={400} class="rounded-[26px] shadow-md"/>
+          <div class="flex flex-col items-center gap-1">
+            <h3 class="text-lg font-bold lg:tracking-tight self-stretch">Home</h3>
+            <p class="text-md text-slate-700 self-stretch">Text</p>
+          </div>
+        </div>
+
+        <div class="flex flex-col items-center gap-9">
+          <Image src={calendar} alt="" width={260} height={400} class="rounded-[26px] shadow-md"/>
+          <div class="flex flex-col items-center gap-1">
+            <h3 class="text-lg font-bold lg:tracking-tight self-stretch">Calendar</h3>
+            <p class="text-md text-slate-700 self-stretch">Text</p>
+          </div>
+        </div>
+
+        <div class="flex flex-col items-center gap-9">
+          <Image src={profile} alt="" width={260} height={400} class="rounded-[26px] shadow-md"/>
+          <div class="flex flex-col items-center gap-1">
+            <h3 class="text-lg font-bold lg:tracking-tight self-stretch">Profile</h3>
+            <p class="text-md text-slate-700 self-stretch">Text</p>
+          </div>
+        </div>
+
+      </div>
+
+      <h2 class="text-lg lg:text-xl font-bold lg:tracking-tight mt-24">
+        Testing
+      </h2>
+      <p class="mt-2 max-w-xl text-md text-slate-700">A reiterative approach made it possible to make quick fixes and changes, and to create the best possible experience for our final users.</p>
+     
+      <div class="bg-white rounded-xl flex justify-between items-start mt-9 p-6 mx-auto w-full max-w-4xl">
+        <div class="text-left flex flex-col max-w-lg items-start self-stretch gap-12 p-9 order-0">
+          <h2 class="text-2xl lg:text-3xl font-semibold lg:tracking-tight">Wireframes</h2>
+          <div class="flex flex-col gap-3">
+            <div class="inline-flex gap-2">
+              <Icon class="text-indigo-300 w-6" name="bx:bxs-check-square" />
+              <p>Positive feedback</p>
+            </div>
+            <div class="inline-flex gap-2">
+              <Icon class=" text-red-300 w-6" name="bx:bxs-x-square" />
+              <p>Negative feedback</p>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <Image src={wireframe} alt="wireframe" width={420} height={420} class="rounded-lg object-cover"/>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-xl flex items-start gap-6 mt-9 p-6 mx-auto w-full max-w-4xl">
+        <div class="text-left flex flex-col max-w-lg items-start self-stretch gap-12 p-9 order-1">
+          <h2 class="text-2xl lg:text-3xl font-semibold lg:tracking-tight">ADHD People</h2>
+          <div class="flex flex-col gap-3">
+            <div class="inline-flex gap-2">
+              <Icon class="text-indigo-300 w-6" name="bx:bxs-check-square" />
+              <p>Positive feedback</p>
+            </div>
+            <div class="inline-flex gap-2">
+              <Icon class=" text-red-300 w-6" name="bx:bxs-x-square" />
+              <p>Negative feedback</p>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <Image src={adhd} alt="adhd testing" width={420} height={420} class="rounded-lg object-cover"/>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-xl flex justify-between items-start mt-9 p-6 mx-auto w-full max-w-4xl">
+        <div class="text-left flex flex-col max-w-lg items-start self-stretch gap-12 p-9 order-0">
+          <h2 class="text-2xl lg:text-3xl font-semibold lg:tracking-tight">Madness</h2>
+          <div class="flex flex-col gap-3">
+            <div class="inline-flex gap-2">
+              <Icon class="text-indigo-300 w-6" name="bx:bxs-check-square" />
+              <p>Positive feedback</p>
+            </div>
+            <div class="inline-flex gap-2">
+              <Icon class=" text-red-300 w-6" name="bx:bxs-x-square" />
+              <p>Negative feedback</p>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <Image src={madness} alt="madness" width={420} height={420} class="rounded-lg object-cover"/>
+        </div>
+      </div>
+  </div>
+</div>

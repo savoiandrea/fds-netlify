@@ -2,10 +2,13 @@
 import Layout from "@layouts/Layout.astro";
 import Container from "@components/container.astro";
 import Sectionhead from "@components/sectionhead.astro";
+import Identity from "@components/identity.astro";
+import Usability from "@components/usability.astro";
+import FinalApp from "@components/final-app.astro";
 
 ---
 
-<Layout title="Device">
+<Layout title="Application">
   <Container>
     <Sectionhead>
       <Fragment slot="title">Application</Fragment>
@@ -14,7 +17,9 @@ import Sectionhead from "@components/sectionhead.astro";
       </Fragment>
     </Sectionhead>
 
-    
+    <Identity />
+    <Usability />
+    <FinalApp />
     
   </Container>
 </Layout>
