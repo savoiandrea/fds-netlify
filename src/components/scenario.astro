@@ -17,42 +17,48 @@ const steps = [
     title: "Place the provided tags on your object",
     description:
       "RFID stickers are included in the package to be affixed to the objects you want to register in the application. They are small and adhere to most surfaces without significantly altering the appearance of the object.",
-    picture:"src/assets/storyboard/frame-1.png",
+    picture:"/src/assets/storyboard/frame-1.png",
+    url: "https://polimi365-my.sharepoint.com/personal/10731838_polimi_it/_layouts/15/embed.aspx?UniqueId=4ce18d85-6e4a-4862-8764-a34bfe8413df",
   },
   {
     number: "2",
     title: "Register your items in the app",
     description:
       "The user is guided step by step through the item registration process with video tutorials, avoiding misunderstandings and maintaining high motivation.",
-      picture:"src/assets/storyboard/frame-2.png",
+      picture:"/src/assets/storyboard/frame-2.png",
+      url: "https://polimi365-my.sharepoint.com/personal/10731838_polimi_it/_layouts/15/embed.aspx?UniqueId=0ca7c826-70c5-44a6-86dc-f3e5c7e45468",
   },
   {
     number: "3",
     title: "Create a new event in your calendar",
     description:
       "It is possible to create events based on our most frequent activities, such as going to the office or attending a fitness class. You can enter the departure time to receive timely notifications.",
-      picture:"src/assets/storyboard/frame-3.png",
+      picture:"/src/assets/storyboard/frame-3.png",
+      url: "https://polimi365-my.sharepoint.com/personal/10731838_polimi_it/_layouts/15/embed.aspx?UniqueId=dae288b2-abb5-4a22-b56e-9c6f3489d6e7",
   },
   {
     number: "4",
     title: "Select the items needed for the event from your inventory",
     description:
       "For each event, we can associate the items to bring with us by selecting them from the inventory or scanning new ones.",
-      picture:"src/assets/storyboard/frame-4.png",
+      picture:"/src/assets/storyboard/frame-4.png",
+      url: "https://polimi365-my.sharepoint.com/personal/10731838_polimi_it/_layouts/15/embed.aspx?UniqueId=2dd2c017-569a-40c0-915c-2cf45de26324",
   },
   {
     number: "5",
     title: "When it’s time to leave, Dory will remind you of the items to put in your bag",
     description:
       "If there are items that haven't been placed in the bag near the departure time, Dory will remind us with repeated notifications. If we are already wearing some of the items to bring with us, such as glasses or a wallet, we can notify Dory to consider them as 'with us.'",
-      picture:"src/assets/storyboard/frame-5.png",
+      picture:"/src/assets/storyboard/frame-5.png",
+      url: "https://polimi365-my.sharepoint.com/personal/10731838_polimi_it/_layouts/15/embed.aspx?UniqueId=86e4c108-03e7-45aa-9937-217e2e02cae1",
   },
   {
     number: "6",
     title: "Live your days without worries!",
     description:
       "From now on, Dory will take care of everything. When needed, it will alert you. If you want a quick look at what you're bringing with you for added security, Dory will always serve as a 'window' into your bag.",
-      picture:"src/assets/storyboard/frame-6.png",
+      picture:"/src/assets/storyboard/frame-6.png",
+      url: "https://polimi365-my.sharepoint.com/personal/10731838_polimi_it/_layouts/15/embed.aspx?UniqueId=21519ade-fd73-4ac5-8ddc-b2b5d432027c",
   },
 ];
 
@@ -81,7 +87,8 @@ const steps = [
               <p class="text-left text-xs text-slate-700">{item.description}</p>
             </div>
           </div>
-          <img src={item.picture} width="320px" class="object-cover" alt="Scenario Image" />
+          <!-- <img src={item.picture} width="320px" class="object-cover" alt="Scenario Image" /> -->
+          <iframe src={item.url} width="320" class="object-cover" frameborder="0" scrolling="no" allowfullscreen></iframe>
         </div>
         ))
       }
