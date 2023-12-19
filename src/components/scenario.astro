@@ -1,7 +1,7 @@
 ---
 import Link from "./ui/link.astro";
 import { Icon } from "astro-icon";
-import hero from 'assets/team.jpeg';
+import system from 'assets/system-architecture.svg';
 import { Image , Picture } from "@astrojs/image/components";
 
 import frame1 from "assets/storyboard/frame-1.png";
@@ -104,12 +104,12 @@ const steps = [
     </div>
     <div class="flex items-center mt-4">
       <Picture
-        src={hero}
+        src={system}
         alt="System architecture"
-        sizes="(max-width: 800px) 100vw, 800px"
-        widths={[200, 400, 800]}
+        sizes="(max-width: 1200px) 100vw, 1000px"
+        widths={[200, 400, 1400]}
         aspectRatio="16:9"
-        background="#ffffff"
+        background="#B0B0FB"
         fit="cover"
         position="center"
         loading="eager"

@@ -109,9 +109,23 @@ const professors = [
 
       </div>
 
-        <h2 class="text-lg font-semibold lg:tracking-tight mt-24">
+      <h2 class="text-lg font-semibold lg:tracking-tight mt-20">
+        Teaching Team
+      </h2>
+      <ul class="mt-2 max-w-md text-center text-sm text-slate-700">
+        {
+        professors.map((item) => (
+        <li class="px-2 py-1 self-stretch">
+        {item.name}
+        </li>
+        ))
+      }
+      </ul>
+
+        <h2 class="text-lg font-semibold lg:tracking-tight mt-44">
           References
         </h2>
+        <!--
         <ul class="mt-2 max-w-md text-left text-xs text-slate-700">
           {
           references.map((item) => (
@@ -121,19 +135,61 @@ const professors = [
           ))
         }
         </ul>
-
-        <h2 class="text-lg font-semibold lg:tracking-tight mt-24">
-          Teaching Team
-        </h2>
-        <ul class="mt-2 max-w-md text-center text-sm text-slate-700">
-          {
-          professors.map((item) => (
+        -->
+        <ul class="mt-6 max-w-lg text-left text-xs text-slate-700 list-decimal">Desk Research
           <li class="px-2 py-1 self-stretch">
-          {item.name}
+            The Mini ADHD Coach. (n.d.). Living with ADHD. Available at: https://www.theminiadhdcoach.com/living-with-adhd
           </li>
-          ))
-        }
+          <li class="px-2 py-1 self-stretch">
+            Young Minds. (n.d.). ADHD and Mental Health. Available at: https://www.youngminds.org.uk/young-person/mental-health-conditions/adhd-and-mental-health/
+          </li>
+          <li class="px-2 py-1 self-stretch">
+            Bunford, N., Brandwein, A. B., Roth, C., & Ritzler, B. (2020). Sensory Processing in Adult ADHD - A Systematic Review. ResearchGate. Available at: https://www.researchgate.net/publication/344814107_Sensory_Processing_in_Adult_ADHD_-_A_Systematic_Review#fullTextFileContent
+          </li>
+          <li class="px-2 py-1 self-stretch">
+            University of Helsinki. (n.d.). Understanding ADHD. Available at: https://www.helsinki.fi/en/news/education/understanding-adhd
+          </li>
+          <li class="px-2 py-1 self-stretch">
+            New European Bauhaus. (n.d.). Station Being. Available at: https://new-european-bauhaus.europa.eu/get-inspired/inspiring-projects-and-ideas/station-being_en
+          </li>
+          <li class="px-2 py-1 self-stretch">
+            Diller Scofidio + Renfro. (n.d.). The High Line. Available at: https://dsrny.com/project/the-high-line
+          </li>
+          <li class="px-2 py-1 self-stretch">
+            Spazio Nautilus. (n.d.). Progetto Autside - Stanza Multisensoriale. Available at: https://spazionautilus.it/progetto-autside-stanza-multisensoriale/
+          </li>
+          <li class="px-2 py-1 self-stretch">
+            Inclusion Europe. (n.d.). European Accessibility Act. Available at: https://www.inclusion-europe.eu/european-accessibility-act/#Benefits
+          </li>
         </ul>
+
+        <ul class="mt-6 max-w-lg text-left text-xs text-slate-700 list-decimal">Benchmarking
+          <li class="px-2 py-1 self-stretch">
+            Corriere della Sera. (2022, September 1). Funziona la cassa veloce Decathlon: ecco i segreti del sistema di pagamento smart della GDO italiana. Available at: https://www.corriere.it/tecnologia/22_settembre_01/funziona-cassa-veloce-decathlon-ecco-segreti-sistema-pagamento-smart-gdo-italiana-0e61df91-676c-4875-8204-917a43196xlk.shtml
+          </li>
+          <li class="px-2 py-1 self-stretch">
+            Tile. (n.d.). Available at: https://it.tile.com/it
+          </li>
+          <li class="px-2 py-1 self-stretch">
+            Remember The Milk. (n.d.). Tour. Available at: https://www.rememberthemilk.com/tour/
+          </li>
+          <li class="px-2 py-1 self-stretch">
+            Pix Backpack. (n.d.). Available at: https://www.instagram.com/pix.backpack/
+          </li>
+        </ul>
+
+        <ul class="mt-6 max-w-lg text-left text-xs text-slate-700 list-decimal">User Interface
+          <li class="px-2 py-1 self-stretch">
+            HelloTimo. (n.d.). HelloTimo Website. Available at: https://www.hellotimo.co/
+          </li>
+          <li class="px-2 py-1 self-stretch">
+            Alexa App. (n.d.). Available at: https://apps.apple.com/it/app/amazon-alexa/id944011620
+          </li>
+          <li class="px-2 py-1 self-stretch">
+            Apple Developer. (n.d.). Human Interface Guidelines. Available at: https://developer.apple.com/design/human-interface-guidelines
+          </li>
+        </ul>
+        
 
         <div class="flex flex-col items-center gap-4 mt-24">
           <Image src={polimi} alt="" height={120} class="object-fill"/>

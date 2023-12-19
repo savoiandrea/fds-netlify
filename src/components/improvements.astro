@@ -4,35 +4,27 @@ import { Icon } from "astro-icon";
 
 const improvements = [
   {
-    title: "example",
+    title: "Better Intuitiveness",
     description:
-      "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.",
+      "Users faced difficulties in selecting items within the app, especially while choosing what to wear. Addressed by modifying the button shape to a more universally recognizable pattern for enhanced intuitiveness.",
     user: "user",
-    icon:"bx:bxs-like",
+    icon:"bx:bxs-bulb",
     color:"text-indigo-400"
   },
   {
-    title: "example2",
+    title: "Overview Visualization Improved",
     description:
-      "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.",
+      "Testers recommended enhancements in the visualization of the bag on the homepage. Resolved by restructuring the visualization, allocating more visual space to the list of objects for better clarity.",
     user: "user",
-    icon:"bx:bxs-like",
+    icon:"bx:bxs-show",
     color:"text-indigo-400"
   },
   {
-    title: "example3",
+    title: "More User Freedom",
     description:
-      "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.",
+      "Users expressed a desire for increased flexibility, specifically in the ability to close reminder notifications for missing items. Implemented, with a confirmation prompt to prevent accidental dismissals and ensure mindful interaction.",
     user: "user",
-    icon:"bx:bxs-like",
-    color:"text-indigo-400"
-  },
-  {
-    title: "example4",
-    description:
-      "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.",
-    user: "user",
-    icon:"bx:bxs-like",
+    icon:"bx:bxs-category",
     color:"text-indigo-400"
   },
 ];
@@ -40,18 +32,19 @@ const improvements = [
 ---
 <div class="mx-auto px-5">
 
-  <div class="my-32 mx-auto max-w-6xl">
+  <div class="my-32 mx-auto max-w-7xl">
       <h3 class="text-center text-xl lg:text-2xl font-normal lg:tracking-tight">
         Post-Feedbacks Improvements
       </h3>
-      <div class="grid sm:grid-cols-2 md:grid-cols-4 mt-12 gap-4 flex items-stretch">
+      <div class="grid sm:grid-cols-1 md:grid-cols-3 mt-12 gap-4 items-stretch">
         {
           improvements.map((item) => (
-            <div class="bg-slate-50 shadow-slate-500 p-8 md:px-10 md:py-10 mt-1 rounded-lg flex-row gap-4 items-start">
+            <div class="bg-slate-50 shadow-slate-500 p-8 md:px-10 md:py-10 mt-1 rounded-lg flex flex-col gap-4 items-start">
               
               <div class="text-left">
                 <Icon class="w-6 h-6" name={item.icon} />
-                <p class="text-slate-600 text-md mt-6 leading-relaxed max-w-2xl">{item.description}</p>
+                <h2 class="text-black text-xl font-semibold mt-6 leading-relaxed">{item.title}</h2>
+                <p class="text-slate-600 text-md mt-2 leading-relaxed max-w-2xl">{item.description}</p>
               </div>
               <!--
               <div class="text-left flex items-center gap-4 mt-4">
