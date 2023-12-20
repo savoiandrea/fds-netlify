@@ -73,22 +73,23 @@ const steps = [
     </h2>
   </div>
 
-  <div class="flex flex-col items-start self-stretch gap-8 mt-8">
+  <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-between gap-8 mt-8">
     
       {
         steps.map((item) => (
-        <div class="p-6 flex justify-between gap-12 items-center mx-auto w-full max-w-3xl rounded-xl border-2 border-slate-300">
+        <div class="p-4 flex flex-col items-start self-stretch rounded-xl border-2 border-slate-300 shadow-md shadow-grey-300">
           
-          <div class="flex items-start gap-6 self-stretch max-w-sm">
+          <iframe src={item.url} height="280" class="w-full object-cover" frameborder="0" scrolling="no" allowfullscreen></iframe>
+          
+          <div class="flex flex-col items-start gap-4 py-6 px-4 self-stretch">
             <p class="bg-indigo-300 flex w-7 h-7 p-2 flex-col justify-center items-center rounded-full shrink-0 text-sm font-bold">{item.number}</p>
             
             <div class="flex flex-col items-start gap-3">
-              <h2 class=" text-left mt-1 text-lg font-bold text-black leading-6">{item.title}</h2>
+              <h2 class="text-left mt-1 text-2xl font-bold text-black leading-7">{item.title}</h2>
               <p class="text-left text-xs text-slate-700">{item.description}</p>
             </div>
           </div>
-          <!-- <img src={item.picture} width="320px" class="object-cover" alt="Scenario Image" /> -->
-          <iframe src={item.url} width="320" class="object-cover" frameborder="0" scrolling="no" allowfullscreen></iframe>
+          
         </div>
         ))
       }
