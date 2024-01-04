@@ -74,7 +74,7 @@ const steps = [
   </div>
 
   <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-between gap-8 mt-8">
-    
+      <!--
       {
         steps.map((item) => (
         <div class="p-4 flex flex-col items-start self-stretch rounded-xl border-2 border-slate-300 shadow-md shadow-grey-300">
@@ -93,6 +93,147 @@ const steps = [
         </div>
         ))
       }
+      -->
+
+      <div class="p-4 flex flex-col items-start self-stretch rounded-xl border-2 border-slate-300 shadow-md shadow-grey-300">
+          <Picture
+            src={frame1}
+            sizes="(max-width: 1200px) 100vw, 1000px"
+            widths={[280, 400, 1400]}
+            aspectRatio="16:9"
+            background="#B0B0FB"
+            fit="cover"
+            position="center"
+            loading="eager"
+            decoding="sync"
+            class="w-full rounded-md"
+          />
+          <div class="flex flex-col items-start gap-4 py-6 px-4 self-stretch">
+            <p class="bg-indigo-300 flex w-7 h-7 p-2 flex-col justify-center items-center rounded-full shrink-0 text-sm font-bold">1</p>
+            
+            <div class="flex flex-col items-start gap-3">
+              <h2 class="text-left mt-1 text-2xl font-bold text-black leading-7">Place the provided tags on your object</h2>
+              <p class="text-left text-xs text-slate-700">RFID stickers are included in the package to be affixed to the objects you want to register in the application. They are small and adhere to most surfaces without significantly altering the appearance of the object.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="p-4 flex flex-col items-start self-stretch rounded-xl border-2 border-slate-300 shadow-md shadow-grey-300">
+          <Picture
+            src={frame2}
+            sizes="(max-width: 1200px) 100vw, 1000px"
+            widths={[280, 400, 1400]}
+            aspectRatio="16:9"
+            background="#B0B0FB"
+            fit="cover"
+            position="center"
+            loading="eager"
+            decoding="sync"
+            class="w-full rounded-md"
+          />
+          <div class="flex flex-col items-start gap-4 py-6 px-4 self-stretch">
+            <p class="bg-indigo-300 flex w-7 h-7 p-2 flex-col justify-center items-center rounded-full shrink-0 text-sm font-bold">2</p>
+            
+            <div class="flex flex-col items-start gap-3">
+              <h2 class="text-left mt-1 text-2xl font-bold text-black leading-7">Register your items in the app</h2>
+              <p class="text-left text-xs text-slate-700">The user is guided step by step through the item registration process with video tutorials, avoiding misunderstandings and maintaining high motivation.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="p-4 flex flex-col items-start self-stretch rounded-xl border-2 border-slate-300 shadow-md shadow-grey-300">
+          <Picture
+            src={frame3}
+            sizes="(max-width: 1200px) 100vw, 1000px"
+            widths={[280, 400, 1400]}
+            aspectRatio="16:9"
+            background="#B0B0FB"
+            fit="cover"
+            position="center"
+            loading="eager"
+            decoding="sync"
+            class="w-full rounded-md"
+          />
+          <div class="flex flex-col items-start gap-4 py-6 px-4 self-stretch">
+            <p class="bg-indigo-300 flex w-7 h-7 p-2 flex-col justify-center items-center rounded-full shrink-0 text-sm font-bold">3</p>
+            
+            <div class="flex flex-col items-start gap-3">
+              <h2 class="text-left mt-1 text-2xl font-bold text-black leading-7">Create a new event in your calendar</h2>
+              <p class="text-left text-xs text-slate-700">It is possible to create events based on our most frequent activities, such as going to the office or attending a fitness class. You can enter the departure time to receive timely notifications.</p>
+            </div>
+          </div>
+        </div>
+        
+
+        <div class="p-4 flex flex-col items-start self-stretch rounded-xl border-2 border-slate-300 shadow-md shadow-grey-300">
+          <Picture
+            src={frame4}
+            sizes="(max-width: 1200px) 100vw, 1000px"
+            widths={[280, 400, 1400]}
+            aspectRatio="16:9"
+            background="#B0B0FB"
+            fit="cover"
+            position="center"
+            loading="eager"
+            decoding="sync"
+            class="w-full rounded-md"
+          />
+          <div class="flex flex-col items-start gap-4 py-6 px-4 self-stretch">
+            <p class="bg-indigo-300 flex w-7 h-7 p-2 flex-col justify-center items-center rounded-full shrink-0 text-sm font-bold">4</p>
+            
+            <div class="flex flex-col items-start gap-3">
+              <h2 class="text-left mt-1 text-2xl font-bold text-black leading-7">Select the items needed for the event from your inventory</h2>
+              <p class="text-left text-xs text-slate-700">For each event, we can associate the items to bring with us by selecting them from the inventory or scanning new ones.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="p-4 flex flex-col items-start self-stretch rounded-xl border-2 border-slate-300 shadow-md shadow-grey-300">
+          <Picture
+            src={frame5}
+            sizes="(max-width: 1200px) 100vw, 1000px"
+            widths={[280, 400, 1400]}
+            aspectRatio="16:9"
+            background="#B0B0FB"
+            fit="cover"
+            position="center"
+            loading="eager"
+            decoding="sync"
+            class="w-full rounded-md"
+          />
+          <div class="flex flex-col items-start gap-4 py-6 px-4 self-stretch">
+            <p class="bg-indigo-300 flex w-7 h-7 p-2 flex-col justify-center items-center rounded-full shrink-0 text-sm font-bold">5</p>
+            
+            <div class="flex flex-col items-start gap-3">
+              <h2 class="text-left mt-1 text-2xl font-bold text-black leading-7">When it’s time to leave, Dory will remind you of the items to put in your bag</h2>
+              <p class="text-left text-xs text-slate-700">If there are items that haven't been placed in the bag near the departure time, Dory will remind us with repeated notifications. If we are already wearing some of the items to bring with us, such as glasses or a wallet, we can notify Dory to consider them as 'with us.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="p-4 flex flex-col items-start self-stretch rounded-xl border-2 border-slate-300 shadow-md shadow-grey-300">
+          <Picture
+            src={frame6}
+            sizes="(max-width: 1200px) 100vw, 1000px"
+            widths={[280, 400, 1400]}
+            aspectRatio="16:9"
+            background="#B0B0FB"
+            fit="cover"
+            position="center"
+            loading="eager"
+            decoding="sync"
+            class="w-full rounded-md"
+          />
+          <div class="flex flex-col items-start gap-4 py-6 px-4 self-stretch">
+            <p class="bg-indigo-300 flex w-7 h-7 p-2 flex-col justify-center items-center rounded-full shrink-0 text-sm font-bold">6</p>
+            
+            <div class="flex flex-col items-start gap-3">
+              <h2 class="text-left mt-1 text-2xl font-bold text-black leading-7">Live your days without worries!</h2>
+              <p class="text-left text-xs text-slate-700">From now on, Dory will take care of everything. When needed, it will alert you. If you want a quick look at what you're bringing with you for added security, Dory will always serve as a 'window' into your bag.</p>
+            </div>
+          </div>
+        </div>
+
   </div>
 
   
